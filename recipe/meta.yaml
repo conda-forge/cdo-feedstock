@@ -1,11 +1,13 @@
+{% set version = "1.7.1" %}
+
 package:
     name: cdo
-    version: 1.7.0
+    version: {{ version }}
 
 source:
-    fn: cdo-1.7.0.tar.gz
-    url: https://code.zmaw.de/attachments/download/11392/cdo-1.7.0.tar.gz
-    md5: cca30c3c79335ad734e1838806f7bfc2
+    fn: cdo-{{ version }}.tar.gz
+    url: https://code.zmaw.de/attachments/download/12070/cdo-{{ version }}.tar.gz
+    md5: f513a4bef1cf081cab3cfdc79d177bc5
 
 build:
     number: 0
@@ -32,7 +34,7 @@ test:
 
 about:
     home: https://code.zmaw.de/projects/cdo
-    license: GNU General Public License v2
+    license: GPLv2
     summary: CLI tools to manipulate and analyse Climate and NWP model Data
 
 extra:
