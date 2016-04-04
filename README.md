@@ -3,7 +3,7 @@ About cdo
 
 Home: https://code.zmaw.de/projects/cdo
 
-Package license: GNU General Public License v2
+Package license: GPLv2
 
 Feedstock license: BSD
 
@@ -72,6 +72,11 @@ Current build status
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cdo-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/cdo-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/cdo-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cdo-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cdo-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cdo-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cdo/badges/version.svg)](https://anaconda.org/conda-forge/cdo)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cdo/badges/downloads.svg)](https://anaconda.org/conda-forge/cdo)
 
 
 Updating cdo-feedstock

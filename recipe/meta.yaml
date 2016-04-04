@@ -31,6 +31,7 @@ requirements:
 test:
     commands:
         - cdo -h
+        - conda inspect linkages -n _test cdo  # [linux]
 
 about:
     home: https://code.zmaw.de/projects/cdo
