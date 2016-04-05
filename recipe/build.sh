@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $(uname) == 'Darwin' ]]; then
+  export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
+elif [[ $(uname) == 'Linux' ]]; then
+  export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
+fi
+
 export CPPFLAGS=-I$PREFIX/include
 export LDFLAGS=-L$PREFIX/lib
 ./configure --prefix=$PREFIX \
@@ -11,7 +17,5 @@ export LDFLAGS=-L$PREFIX/lib
             --with-proj=$PREFIX
 
 make
-if [[ $(uname) == Linux ]]; then
-    make check
-fi
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
