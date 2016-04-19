@@ -10,19 +10,19 @@ source:
     md5: f513a4bef1cf081cab3cfdc79d177bc5
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win]
 
 requirements:
     build:
         - jasper
-        - libnetcdf
+        - libnetcdf 4.3*
         - netcdf-fortran
         - proj.4
         - libuuid
     run:
         - jasper
-        - libnetcdf
+        - libnetcdf 4.3*
         - netcdf-fortran
         - proj.4
         - libgcc
