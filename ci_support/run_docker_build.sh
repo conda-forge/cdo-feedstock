@@ -41,6 +41,9 @@ conda clean --lock
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
 
+# Bypass the control-freak run_conda_forge_build_setup and use versions that do work.
+conda install --yes conda-build=1.21.11
+
 # Embarking on 1 case(s).
     conda build /recipe_root --quiet || exit 1
     upload_or_check_non_existence /recipe_root conda-forge --channel=main || exit 1
