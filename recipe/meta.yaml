@@ -31,7 +31,7 @@ requirements:
 test:
     commands:
         - cdo -h
-        - conda inspect linkages -p $PREFIX cdo  # [not win]
+        #- conda inspect linkages -p $PREFIX cdo  # [not win]
 
 about:
     home: https://code.zmaw.de/projects/cdo
