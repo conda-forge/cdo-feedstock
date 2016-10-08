@@ -10,7 +10,7 @@ source:
     md5: f513a4bef1cf081cab3cfdc79d177bc5
 
 build:
-    number: 2
+    number: 3
     skip: True  # [win]
 
 requirements:
@@ -18,25 +18,25 @@ requirements:
         - jasper
         - libnetcdf 4.4.*
         - netcdf-fortran
-        - proj.4
+        - proj.4 4.9.3
         - libuuid
     run:
         - jasper
         - libnetcdf 4.4.*
         - netcdf-fortran
-        - proj.4
+        - proj.4 4.9.3
         - libgcc
         - libuuid
 
 test:
     commands:
         - cdo -h
-        - conda inspect linkages -n _test cdo  # [linux]
+        #- conda inspect linkages -p $PREFIX cdo  # [not win]
 
 about:
     home: https://code.zmaw.de/projects/cdo
-    license: GPLv2
-    summary: CLI tools to manipulate and analyse Climate and NWP model Data
+    license: GPL-2.0
+    summary: 'CLI tools to manipulate and analyse Climate and NWP model Data.'
 
 extra:
     recipe-maintainers:
