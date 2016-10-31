@@ -33,7 +33,6 @@ requirements:
     - udunits2
     - libxml2
     - fftw
-    - libgfortran
 
 test:
   commands:
