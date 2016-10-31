@@ -10,20 +10,18 @@ source:
   md5: f513a4bef1cf081cab3cfdc79d177bc5
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win]
 
 requirements:
   build:
     - jasper
     - libnetcdf 4.4.*
-    - netcdf-fortran 4.4.*
     - proj.4 4.9.3
     - util-linux  # [linux]
   run:
     - jasper
     - libnetcdf 4.4.*
-    - netcdf-fortran 4.4.*
     - proj.4 4.9.3
     - libgcc
     - util-linux  # [linux]
