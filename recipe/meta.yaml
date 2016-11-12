@@ -7,23 +7,23 @@ package:
 source:
   fn: cdo-{{ version }}.tar.gz
   url: https://code.zmaw.de/attachments/download/12070/cdo-{{ version }}.tar.gz
-  md5: f513a4bef1cf081cab3cfdc79d177bc5
+  sha256: 5c24a5cb74dcf6e8b5140c67033868a5a0b641341e3adad3cb4035d5ad6e70a6
 
 build:
-  number: 5
+  number: 6
   skip: True  # [win]
 
 requirements:
   build:
     - jasper
     - libnetcdf 4.4.*
-    - proj.4 4.9.3
+    - proj4 4.9.3
     - util-linux  # [linux]
   run:
     - jasper
     - libnetcdf 4.4.*
-    - proj.4 4.9.3
-    - libgcc
+    - proj4 4.9.3
+    - libgcc  # [linux]
     - util-linux  # [linux]
 
 test:
