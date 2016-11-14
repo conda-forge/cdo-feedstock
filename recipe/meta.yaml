@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: cdo
@@ -6,11 +6,11 @@ package:
 
 source:
   fn: cdo-{{ version }}.tar.gz
-  url: https://code.zmaw.de/attachments/download/12070/cdo-{{ version }}.tar.gz
-  sha256: 5c24a5cb74dcf6e8b5140c67033868a5a0b641341e3adad3cb4035d5ad6e70a6
+  url: https://code.zmaw.de/attachments/download/12760/cdo-{{ version }}.tar.gz
+  sha256: 4c43eba7a95f77457bfe0d30fb82382b3b5f2b0cf90aca6f0f0a008f6cc7e697
 
 build:
-  number: 6
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -19,12 +19,20 @@ requirements:
     - libnetcdf 4.4.*
     - proj4 4.9.3
     - util-linux  # [linux]
+    - ecmwf_grib
+    - udunits2
+    - libxml2
+    - fftw
   run:
     - jasper
     - libnetcdf 4.4.*
     - proj4 4.9.3
     - libgcc  # [linux]
     - util-linux  # [linux]
+    - ecmwf_grib
+    - udunits2
+    - libxml2
+    - fftw
 
 test:
   commands:

@@ -1,21 +1,23 @@
 #!/bin/bash
 
-if [[ $(uname) == Darwin ]]; then
-  export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
-elif [[ $(uname) == Linux ]]; then
-  export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
+if [[ $(uname) == 'Darwin' ]]; then
+  OPTS="--disable-openmp"
+elif [[ $(uname) == 'Linux' ]]; then
+  export CFLAGS="-fPIC -fopenmp $CFLAGS"
+  OPTS="--with-jasper=$PREFIX --with-libxml2=$PREFIX --with-curl=$PREFIX --with-proj=$PREFIX --with-fftw3 --with-grib_api=$PREFIX --with-udunits2=$PREFIX --with-netcdf=$PREFIX --with-hdf5=$PREFIX"
 fi
 
-export CPPFLAGS=-I$PREFIX/include
-export LDFLAGS=-L$PREFIX/lib
+export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
+export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
+
 ./configure --prefix=$PREFIX \
             --disable-debug \
             --disable-dependency-tracking \
-            --with-jasper=$PREFIX \
-            --with-hdf5=$PREFIX \
-            --with-netcdf=$PREFIX \
-            --with-proj=$PREFIX
+            $OPTS
 
 make
-eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
+# See https://github.com/conda-forge/cdo-feedstock/pull/8#issuecomment-257273909
+# Hopefully https://github.com/conda-forge/hdf5-feedstock/pull/48 will fix this.
+# eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
+make check CDO="${SRC_DIR}/src/cdo -L"
 make install
