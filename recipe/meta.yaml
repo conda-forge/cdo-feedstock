@@ -10,7 +10,7 @@ source:
   sha256: 4c43eba7a95f77457bfe0d30fb82382b3b5f2b0cf90aca6f0f0a008f6cc7e697
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - util-linux  # [linux]
     - ecmwf_grib
     - udunits2
-    - libxml2
+    - libxml2 2.9.*
     - fftw
   run:
     - jasper
@@ -31,7 +31,7 @@ requirements:
     - util-linux  # [linux]
     - ecmwf_grib
     - udunits2
-    - libxml2
+    - libxml2 2.9.*
     - fftw
 
 test:
