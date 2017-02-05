@@ -4,7 +4,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   OPTS="--disable-openmp"
 elif [[ $(uname) == 'Linux' ]]; then
   export CFLAGS="-fPIC -fopenmp $CFLAGS"
-  OPTS="--with-jasper=$PREFIX --with-libxml2=$PREFIX --with-curl=$PREFIX --with-proj=$PREFIX --with-fftw3 --with-grib_api=$PREFIX --with-udunits2=$PREFIX --with-netcdf=$PREFIX --with-hdf5=$PREFIX"
+  OPTS="--with-libxml2=$PREFIX --with-curl=$PREFIX --with-proj=$PREFIX --with-fftw3 --with-grib_api=$PREFIX --with-udunits2=$PREFIX --with-netcdf=$PREFIX --with-hdf5=$PREFIX"
 fi
 
 export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
