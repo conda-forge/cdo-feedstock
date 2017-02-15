@@ -10,7 +10,7 @@ source:
   sha256: 4c43eba7a95f77457bfe0d30fb82382b3b5f2b0cf90aca6f0f0a008f6cc7e697
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -35,8 +35,11 @@ requirements:
     - fftw
 
 test:
+  files:
+    - dummy.nc
   commands:
     - cdo -h
+    - cdo sinfo dummy.nc  # [linux]
     - conda inspect linkages -p $PREFIX cdo  # [not win]
     - conda inspect objects -p $PREFIX cdo  # [osx]
 
