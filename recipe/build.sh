@@ -5,10 +5,9 @@ if [[ $(uname) == 'Darwin' ]]; then
   ./configure --prefix=$PREFIX \
               --disable-debug \
               --disable-dependency-tracking \
-              --disable-openmp \
-              --with-netcdf=$PREFIX
-
+              --disable-openmp
 elif [[ $(uname) == 'Linux' ]]; then
+
   export CFLAGS="-fPIC -fopenmp $CFLAGS"
   export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
   export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
@@ -23,6 +22,7 @@ elif [[ $(uname) == 'Linux' ]]; then
               --with-udunits2=$PREFIX \
               --with-netcdf=$PREFIX \
               --with-hdf5=$PREFIX
+
 fi
 
 make

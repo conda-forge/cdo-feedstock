@@ -39,7 +39,7 @@ test:
     - dummy.nc
   commands:
     - cdo -h
-    - cdo sinfo dummy.nc
+    - cdo sinfo dummy.nc  # [linux]
     - conda inspect linkages -p $PREFIX cdo  # [not win]
     - conda inspect objects -p $PREFIX cdo  # [osx]
 
