@@ -1,19 +1,29 @@
 #!/bin/bash
 
 if [[ $(uname) == 'Darwin' ]]; then
-  OPTS="--disable-openmp"
+
+  ./configure --prefix=$PREFIX \
+              --disable-debug \
+              --disable-dependency-tracking \
+              --disable-openmp \
+              --with-netcdf=$PREFIX
+
 elif [[ $(uname) == 'Linux' ]]; then
   export CFLAGS="-fPIC -fopenmp $CFLAGS"
-  OPTS="--with-libxml2=$PREFIX --with-curl=$PREFIX --with-proj=$PREFIX --with-fftw3 --with-grib_api=$PREFIX --with-udunits2=$PREFIX --with-netcdf=$PREFIX --with-hdf5=$PREFIX"
+  export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
+  export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
+  ./configure --prefix=$PREFIX \
+              --disable-debug \
+              --with-fftw3 \
+              --disable-dependency-tracking \
+              --with-libxml2=$PREFIX \
+              --with-curl=$PREFIX \
+              --with-proj=$PREFIX \
+              --with-grib_api=$PREFIX \
+              --with-udunits2=$PREFIX \
+              --with-netcdf=$PREFIX \
+              --with-hdf5=$PREFIX
 fi
-
-export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
-export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
-
-./configure --prefix=$PREFIX \
-            --disable-debug \
-            --disable-dependency-tracking \
-            $OPTS
 
 make
 # See https://github.com/conda-forge/cdo-feedstock/pull/8#issuecomment-257273909
