@@ -1,4 +1,4 @@
-{% set version = "1.8.1" %}
+{% set version = "1.8.2" %}
 
 package:
   name: cdo
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: cdo-{{ version }}.tar.gz
-  url: https://code.zmaw.de/attachments/download/14271/cdo-{{ version }}.tar.gz
-  sha256: c3dd3a986c70e48b7b9cd9658de7794a96f85f25f7c68011fd175ce39abd7f93
+  url: https://code.zmaw.de/attachments/download/14686/cdo-{{ version }}.tar.gz
+  sha256: 6ca6c1263af2237737728ac937a275f8aa27680507636a6b6320f347c69a369a
 
 build:
   number: 0
