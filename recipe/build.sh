@@ -1,33 +1,21 @@
 #!/bin/bash
 
+OPTS=""
+
 if [[ $(uname) == 'Darwin' ]]; then
-
-  ./configure --prefix=$PREFIX \
-              --disable-debug \
-              --disable-dependency-tracking \
-              --disable-openmp
+  OPTS="--disable-openmp"
 elif [[ $(uname) == 'Linux' ]]; then
-
+  OPTS="--with-grib_api=$PREFIX --with-fftw3 --with-libxml2=$PREFIX --with-curl=$PREFIX --with-proj=$PREFIX --with-udunits2=$PREFIX --with-netcdf=$PREFIX --with-hdf5=$PREFIX"
   export CFLAGS="-fPIC -fopenmp $CFLAGS"
   export LDFLAGS="-L$PREFIX/lib -lhdf5 $LDFLAGS"
   export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
-  ./configure --prefix=$PREFIX \
-              --disable-debug \
-              --with-fftw3 \
-              --disable-dependency-tracking \
-              --with-libxml2=$PREFIX \
-              --with-curl=$PREFIX \
-              --with-proj=$PREFIX \
-              --with-grib_api=$PREFIX \
-              --with-udunits2=$PREFIX \
-              --with-netcdf=$PREFIX \
-              --with-hdf5=$PREFIX
-
 fi
 
+./configure --prefix=$PREFIX \
+            --disable-debug \
+            --disable-dependency-tracking \
+            $OPTS
+
 make
-# See https://github.com/conda-forge/cdo-feedstock/pull/8#issuecomment-257273909
-# Hopefully https://github.com/conda-forge/hdf5-feedstock/pull/48 will fix this.
-# eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
-make check CDO="${SRC_DIR}/src/cdo -L"
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
