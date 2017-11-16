@@ -5,12 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: cdo-{{ version }}.tar.gz
   url: https://code.zmaw.de/attachments/download/15187/cdo-{{ version }}.tar.gz
   sha256: df367f8c3abf4ab085bcfc61e0205b28a5ecc69b7b83ba398b4d3c874dd69008
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -40,8 +39,8 @@ test:
   commands:
     - cdo -h
     - cdo sinfo dummy.nc  # [linux]
-    - conda inspect linkages -p $PREFIX cdo  # [not win]
-    - conda inspect objects -p $PREFIX cdo  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://code.zmaw.de/projects/cdo
