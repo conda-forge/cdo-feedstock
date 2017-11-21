@@ -26,7 +26,7 @@ elif [[ $(uname) == 'Linux' ]]; then
 
 fi
 
-make -j12
+make
 # See https://github.com/conda-forge/cdo-feedstock/pull/8#issuecomment-257273909
 # Hopefully https://github.com/conda-forge/hdf5-feedstock/pull/48 will fix this.
 # eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
