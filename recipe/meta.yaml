@@ -22,6 +22,9 @@ requirements:
     - udunits2
     - libxml2 2.9.*
     - fftw
+    - cmor 3.3.0
+    - json-c 0.12.1
+    - ossuuid 1.6.2 0
   run:
     - jasper
     - libnetcdf 4.4.*
@@ -32,6 +35,8 @@ requirements:
     - udunits2
     - libxml2 2.9.*
     - fftw
+    - cmor 3.3.0
+    - ossuuid 1.6.2 0
 
 test:
   files:
