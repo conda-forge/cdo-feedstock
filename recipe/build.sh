@@ -25,7 +25,7 @@ elif [[ $(uname) == 'Linux' ]]; then
               --with-hdf5=$PREFIX \
               --with-cmor=$PREFIX \
               --with-ossp-uuid=$PREFIX \
-              --disable-util-linux-uuid \
+              --disable-util-linux-uuid 
 fi
 
 make
