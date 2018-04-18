@@ -9,13 +9,13 @@ source:
   sha256: d1c5092167034a48e4b8ada24cf78a1d4b84e364ffbb08b9ca70d13f428f300c
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - jasper
-    - libnetcdf 4.4.*
+    - libnetcdf 4.5.*
     - proj4 4.9.3
     - util-linux  # [linux]
     - eccodes
@@ -24,7 +24,7 @@ requirements:
     - fftw
   run:
     - jasper
-    - libnetcdf 4.4.*
+    - libnetcdf >=4.5
     - proj4 4.9.3
     - libgcc  # [linux]
     - util-linux  # [linux]
