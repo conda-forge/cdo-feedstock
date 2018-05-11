@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/17388/cdo-1.9.4-fix.tar.gz
+  url: https://code.mpimet.mpg.de/attachments/download/17388/cdo-{{ version }}-fix.tar.gz
   sha256: 01dd52edd5dc31d9213a6837537a09e0eaba0207337533e7d7465e5328ba2425
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
 
 requirements:
