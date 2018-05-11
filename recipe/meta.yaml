@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://code.zmaw.de/attachments/download/17374/cdo-{{ version }}.tar.gz
-  sha256: 3d1c0fd3f7d38c5d3d88139ca1546c9d24e1b1ff752a794a4194dfe624695def
+  url: https://code.mpimet.mpg.de/attachments/download/17388/cdo-1.9.4-fix.tar.gz
+  sha256: 01dd52edd5dc31d9213a6837537a09e0eaba0207337533e7d7465e5328ba2425
 
 build:
   number: 1
