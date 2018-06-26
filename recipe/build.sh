@@ -10,7 +10,7 @@ elif [[ $(uname) == 'Linux' ]]; then
 
   export CFLAGS="-fPIC -DPIC $CFLAGS"
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp $CFLAGS"
-  export LDFLAGS="-L$PREFIX/lib -lhdf5 $LDFLAGS"
+  export LDFLAGS="-L$PREFIX/lib -lhdf5 -lossp-uuid $LDFLAGS"
   export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
   ./configure --prefix=$PREFIX \
               --disable-debug \
@@ -24,8 +24,8 @@ elif [[ $(uname) == 'Linux' ]]; then
               --with-netcdf=$PREFIX \
               --with-hdf5=$PREFIX \
               --with-cmor=$PREFIX \
-              --with-ossp-uuid=$PREFIX \
-              --disable-util-linux-uuid 
+              --disable-util-linux-uuid \
+              --with-ossp-uuid=$PREFIX
 fi
 
 make
