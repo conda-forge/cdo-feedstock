@@ -21,7 +21,7 @@ requirements:
     - udunits2
     - libxml2 2.9.*
     - fftw
-    - cmor 3.3.0
+    - cmor
     - json-c 0.12.1
     - ossuuid 1.6.2 0
   run:
@@ -34,7 +34,7 @@ requirements:
     - udunits2
     - libxml2 2.9.*
     - fftw
-    - cmor 3.3.0
+    - cmor
     - ossuuid 1.6.2 0
 
 test:
