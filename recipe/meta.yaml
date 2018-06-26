@@ -8,13 +8,13 @@ source:
   url: https://code.zmaw.de/attachments/download/17094/cdo-{{ version }}.tar.gz
   sha256: 6e3251ffb188cb5fbc68e7f4ad23739bc437941035c0c881b94df2e62559a989
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - jasper
-    - libnetcdf 4.4.*
+    - libnetcdf 4.5.*
     - proj4 4.9.3
     - util-linux  # [linux]
     - eccodes
@@ -26,7 +26,7 @@ requirements:
     - ossuuid 1.6.2 0
   run:
     - jasper
-    - libnetcdf 4.4.*
+    - libnetcdf >=4.5
     - proj4 4.9.3
     - libgcc  # [linux]
     - util-linux  # [linux]
