@@ -9,8 +9,8 @@ if [[ $(uname) == 'Darwin' ]]; then
 elif [[ $(uname) == 'Linux' ]]; then
 
   export CFLAGS="-fPIC -DPIC $CFLAGS"
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp $CFLAGS"
-  export LDFLAGS="-L$PREFIX/lib -lhdf5 -lossp-uuid $LDFLAGS"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 $CFLAGS"
+  export LDFLAGS="-L$PREFIX/lib -lhdf5 $LDFLAGS"
   export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
   ./configure --prefix=$PREFIX \
               --disable-debug \
