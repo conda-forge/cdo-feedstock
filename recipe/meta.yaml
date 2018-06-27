@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://code.zmaw.de/attachments/download/17451/cdo-{{ version }}.tar.gz
-  sha256: cc6993e96a20d4b0829cb8f67dbc798e2ee7fa734198054e6c85bcc7d86e3f2e
+  sha256: 906e03f5518488726f8447c6ff4f7fa8
 build:
   number: 1
   skip: True  # [win]
