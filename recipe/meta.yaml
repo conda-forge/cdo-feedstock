@@ -1,12 +1,12 @@
-{% set version = "1.9.5rc1" %}
+{% set version = "1.9.4" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.zmaw.de/attachments/download/17451/cdo-{{ version }}.tar.gz
-  sha256: cc6993e96a20d4b0829cb8f67dbc798e2ee7fa734198054e6c85bcc7d86e3f2e
+  url: https://code.zmaw.de/attachments/download/17374/cdo-{{ version }}.tar.gz
+  sha256: 3d1c0fd3f7d38c5d3d88139ca1546c9d24e1b1ff752a794a4194dfe624695def
 build:
   number: 1
   skip: True  # [win]
@@ -16,7 +16,6 @@ requirements:
     - jasper
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - util-linux  # [linux]
     - eccodes
     - udunits2
     - libxml2 2.9.*
@@ -29,7 +28,6 @@ requirements:
     - libnetcdf 4.4*
     - proj4 4.9.3
     - libgcc  # [linux]
-    - util-linux  # [linux]
     - eccodes
     - udunits2
     - libxml2 2.9.*
