@@ -9,7 +9,7 @@ if [[ $(uname) == 'Darwin' ]]; then
 elif [[ $(uname) == 'Linux' ]]; then
 
   export CFLAGS="-fPIC -DPIC $CFLAGS"
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 $CFLAGS"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp $CFLAGS"
   export LDFLAGS="-L$PREFIX/lib -lhdf5 $LDFLAGS"
   export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
   ./configure --prefix=$PREFIX \
@@ -25,7 +25,7 @@ elif [[ $(uname) == 'Linux' ]]; then
               --with-hdf5=$PREFIX \
               --with-cmor=$PREFIX \
               --disable-util-linux-uuid \
-              --with-ossp-uuid=$PREFIX
+              --with-ossp-uuid
 fi
 
 make
