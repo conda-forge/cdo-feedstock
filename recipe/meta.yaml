@@ -1,11 +1,11 @@
-{% set version = "1.9.4" %}
+{% set version = "1.9.5rc2" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.zmaw.de/attachments/download/17374/cdo-{{ version }}.tar.gz
+  url: https://code.zmaw.de/attachments/download/18082/cdo-{{ version }}.tar.gz
   sha256: 3d1c0fd3f7d38c5d3d88139ca1546c9d24e1b1ff752a794a4194dfe624695def
 build:
   number: 1
