@@ -13,6 +13,10 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+  host:
     - jasper
     - libnetcdf 4.4.*
     - proj4 4.9.3
@@ -27,7 +31,6 @@ requirements:
     - jasper
     - libnetcdf 4.4*
     - proj4 4.9.3
-    - libgcc  # [linux]
     - eccodes
     - udunits2
     - libxml2 2.9.*
