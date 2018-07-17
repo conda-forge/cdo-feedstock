@@ -4,7 +4,6 @@
 language: generic
 
 os: osx
-osx_image: xcode6.4
 
 env:
   matrix:
@@ -56,4 +55,4 @@ install:
 script:
   - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-  - upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./.ci_support/${CONFIG}.yaml
+  - upload_or_check_non_existence ./recipe conda-forge --channel=dev -m ./.ci_support/${CONFIG}.yaml
