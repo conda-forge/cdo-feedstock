@@ -14,8 +14,7 @@ Summary: CLI tools to manipulate and analyse Climate and NWP model Data.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cdo-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cdo-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/cdo-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cdo-feedstock)
+[![Linux,OSX](https://img.shields.io/circleci/project/github/conda-forge/cdo-feedstock/master.svg?label=Linux,OSX)](https://circleci.com/gh/conda-forge/cdo-feedstock)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
