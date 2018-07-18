@@ -14,14 +14,16 @@ Summary: CLI tools to manipulate and analyse Climate and NWP model Data.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cdo-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cdo-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cdo-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cdo-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cdo-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cdo-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/cdo-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cdo-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cdo/badges/version.svg)](https://anaconda.org/conda-forge/cdo)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cdo/badges/downloads.svg)](https://anaconda.org/conda-forge/cdo)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cdo-green.svg)](https://anaconda.org/conda-forge/cdo) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cdo.svg)](https://anaconda.org/conda-forge/cdo) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cdo.svg)](https://anaconda.org/conda-forge/cdo) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cdo.svg)](https://anaconda.org/conda-forge/cdo) |
 
 Installing cdo
 ==============
