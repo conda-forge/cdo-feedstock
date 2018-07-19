@@ -1,15 +1,15 @@
-{% set version = "1.9.3" %}
+{% set version = "1.9.4" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.zmaw.de/attachments/download/16435/cdo-{{ version }}.tar.gz
-  sha256: e83a3de7b402600c0d9a5df18073d36d133ff9719d3c561a0efa90f9c1599f3f
+  url: https://code.mpimet.mpg.de/attachments/download/17438/cdo-{{ version }}-fix.tar.gz
+  sha256: 1727f20dcc11c57195689e7d99b9b7968037f8b3afe5b9c7a6cf7997cf7bb95a
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
 
 requirements:
