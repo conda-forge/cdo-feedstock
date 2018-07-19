@@ -9,28 +9,31 @@ source:
   sha256: 1727f20dcc11c57195689e7d99b9b7968037f8b3afe5b9c7a6cf7997cf7bb95a
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - jasper
-    - libnetcdf 4.5.*
-    - proj4 4.9.3
+    - libnetcdf
+    - proj4
     - util-linux  # [linux]
     - eccodes
     - udunits2
-    - libxml2 2.9.*
+    - libxml2
     - fftw
   run:
     - jasper
-    - libnetcdf >=4.5
-    - proj4 4.9.3
-    - libgcc  # [linux]
+    - libnetcdf
+    - proj4
     - util-linux  # [linux]
     - eccodes
     - udunits2
-    - libxml2 2.9.*
+    - libxml2
     - fftw
 
 test:

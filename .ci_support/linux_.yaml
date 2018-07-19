@@ -1,0 +1,19 @@
+c_compiler:
+- toolchain_c
+cxx_compiler:
+- toolchain_cxx
+fortran_compiler:
+- toolchain_fort
+libnetcdf:
+- '4.6'
+libxml2:
+- '2.9'
+pin_run_as_build:
+  libnetcdf:
+    max_pin: x.x
+  libxml2:
+    max_pin: x.x
+  proj4:
+    max_pin: x.x.x
+proj4:
+- 4.9.3
