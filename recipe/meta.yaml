@@ -22,7 +22,7 @@ requirements:
     - proj4 4.9.3
     - eccodes
     - udunits2
-    - libxml2
+    - libxml2 2.9.*
     - fftw
     - cmor
     - json-c 0.12.1
@@ -33,7 +33,7 @@ requirements:
     - proj4 4.9.3
     - eccodes
     - udunits2
-    - libxml2
+    - libxml2 2.9.*
     - fftw
     - cmor
     - ossuuid 1.6.2 0
@@ -54,5 +54,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - Try2Code
     - ocefpaf
