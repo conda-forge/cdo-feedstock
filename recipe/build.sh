@@ -5,6 +5,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   ./configure --prefix=$PREFIX \
               --disable-debug \
               --disable-dependency-tracking
+
 elif [[ $(uname) == 'Linux' ]]; then
 
   export CFLAGS="-fPIC -DPIC $CFLAGS"

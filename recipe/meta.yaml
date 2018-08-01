@@ -1,39 +1,42 @@
-{% set version = "1.9.5rc3" %}
+{% set version = "1.9.4" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/18117/cdo-{{ version }}.tar.gz
-  sha256: 0c2b84c91065b34f59067f2ea4338b82a1232e47956f11878885fce20e4069d2
+  url: https://code.mpimet.mpg.de/attachments/download/17438/cdo-{{ version }}-fix.tar.gz
+  sha256: 1727f20dcc11c57195689e7d99b9b7968037f8b3afe5b9c7a6cf7997cf7bb95a
+
 build:
   number: 1
   skip: True  # [win]
 
 requirements:
   build:
+    - {{ compiler('fortran') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
   host:
     - jasper
-    - libnetcdf 4.4.*
-    - proj4 4.9.3
+    - libnetcdf
+    - proj4
+    - util-linux  # [linux]
     - eccodes
     - udunits2
-    - libxml2 2.9.*
+    - libxml2
     - fftw
     - cmor
     - json-c 0.12.1
     - ossuuid 1.6.2 0
   run:
     - jasper
-    - libnetcdf 4.4*
-    - proj4 4.9.3
+    - libnetcdf
+    - proj4
+    - util-linux  # [linux]
     - eccodes
     - udunits2
-    - libxml2 2.9.*
+    - libxml2
     - fftw
     - cmor
     - ossuuid 1.6.2 0
@@ -54,4 +57,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - Try2Code
     - ocefpaf
