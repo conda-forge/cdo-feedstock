@@ -27,4 +27,4 @@ source run_conda_forge_build_setup
 set -e
 conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./.ci_support/${CONFIG}.yaml
+upload_or_check_non_existence ./recipe conda-forge --channel=dev -m ./.ci_support/${CONFIG}.yaml
