@@ -1,12 +1,12 @@
-{% set version = "1.9.4" %}
+{% set version = "1.9.5" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/17438/cdo-{{ version }}-fix.tar.gz
-  sha256: 1727f20dcc11c57195689e7d99b9b7968037f8b3afe5b9c7a6cf7997cf7bb95a
+  url: https://code.mpimet.mpg.de/attachments/download/18264/cdo-{{ version }}.tar.gz
+  sha256: 48ed65cc5b436753c8e7f9eadd8aa97376698ce230ceafed2a4350a5b1a27148
 
 build:
   number: 1
@@ -14,27 +14,31 @@ build:
 
 requirements:
   build:
-    - {{ compiler('fortran') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
   host:
     - jasper
     - libnetcdf
     - proj4
-    - util-linux  # [linux]
     - eccodes
     - udunits2
     - libxml2
     - fftw
+    - cmor
+    - json-c
+    - ossuuid
   run:
     - jasper
     - libnetcdf
     - proj4
-    - util-linux  # [linux]
     - eccodes
     - udunits2
     - libxml2
     - fftw
+    - cmor
+    - json-c
+    - ossuuid
 
 test:
   files:
@@ -42,12 +46,11 @@ test:
   commands:
     - cdo -h
     - cdo sinfo dummy.nc  # [linux]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://code.zmaw.de/projects/cdo
   license: GPL-2.0
+  license_file: COPYING
   summary: 'CLI tools to manipulate and analyse Climate and NWP model Data.'
 
 extra:
