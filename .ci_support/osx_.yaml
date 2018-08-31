@@ -34,4 +34,4 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
 proj4:
-- 5.1.0
+- 4.9.3
