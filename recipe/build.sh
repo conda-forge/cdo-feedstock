@@ -22,7 +22,6 @@ elif [[ $(uname) == 'Linux' ]]; then
               --with-udunits2=$PREFIX \
               --with-netcdf=$PREFIX \
               --with-hdf5=$PREFIX \
-              --with-cmor=$PREFIX \
               --with-ossp-uuid=$PREFIX 
 fi
 
