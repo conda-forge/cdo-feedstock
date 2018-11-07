@@ -12,8 +12,6 @@ fortran_compiler:
 - toolchain_fort
 jasper:
 - 1.900.1
-json_c:
-- '0.12'
 libnetcdf:
 - '4.6'
 libxml2:
@@ -21,8 +19,6 @@ libxml2:
 pin_run_as_build:
   jasper:
     max_pin: x
-  json-c:
-    max_pin: x.x
   libnetcdf:
     max_pin: x.x
   libxml2:
