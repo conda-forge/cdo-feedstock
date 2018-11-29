@@ -1,3 +1,7 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+build_number_decrement:
+- '1000'
 c_compiler:
 - toolchain_c
 channel_sources:
@@ -6,8 +10,6 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - toolchain_cxx
-docker_image:
-- condaforge/linux-anvil
 fortran_compiler:
 - toolchain_fort
 jasper:
@@ -16,6 +18,10 @@ libnetcdf:
 - '4.6'
 libxml2:
 - '2.9'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 pin_run_as_build:
   jasper:
     max_pin: x
@@ -26,4 +32,11 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
 proj4:
-- 4.9.3
+- 5.2.0
+zip_keys:
+- - c_compiler
+  - cxx_compiler
+  - fortran_compiler
+  - channel_sources
+  - channel_targets
+  - build_number_decrement
