@@ -1,15 +1,17 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
+build_number_decrement:
+- '0'
 c_compiler:
-- toolchain_c
+- clang
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/gcc7,defaults
 channel_targets:
-- conda-forge main
+- conda-forge gcc7
 cxx_compiler:
-- toolchain_cxx
+- clangxx
 fortran_compiler:
-- toolchain_fort
+- gfortran
 jasper:
 - 1.900.1
 libnetcdf:
@@ -30,4 +32,11 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
 proj4:
-- 4.9.3
+- 5.2.0
+zip_keys:
+- - c_compiler
+  - cxx_compiler
+  - fortran_compiler
+  - channel_sources
+  - channel_targets
+  - build_number_decrement
