@@ -23,8 +23,10 @@ requirements:
     - proj4
     - eccodes
     - udunits2
-    - libxml2
+    - libxml2 2.9.*
     - fftw
+    - cmor
+    - json-c 0.12.1
     - ossuuid
   run:
     - jasper
@@ -32,8 +34,9 @@ requirements:
     - proj4
     - eccodes
     - udunits2
-    - libxml2
+    - libxml2 2.9.*
     - fftw
+    - cmor
     - ossuuid
 
 test:
@@ -51,5 +54,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - Try2Code
     - ocefpaf
