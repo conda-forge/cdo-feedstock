@@ -1,28 +1,30 @@
 c_compiler:
 - gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
 - gxx
+cxx_compiler_version:
+- '7'
 docker_image:
 - condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
+fortran_compiler_version:
+- '7'
 jasper:
 - 1.900.1
 libnetcdf:
-- '4.6'
-libxml2:
-- '2.9'
+- 4.6.2
 pin_run_as_build:
   jasper:
     max_pin: x
   libnetcdf:
-    max_pin: x.x
-  libxml2:
-    max_pin: x.x
+    max_pin: x.x.x
   proj4:
     max_pin: x.x.x
 proj4:
