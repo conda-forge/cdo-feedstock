@@ -1,12 +1,13 @@
-{% set version = "1.9.5" %}
+{% set version = "1.9.6" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/18264/cdo-{{ version }}.tar.gz
-  sha256: 48ed65cc5b436753c8e7f9eadd8aa97376698ce230ceafed2a4350a5b1a27148
+  url: https://code.mpimet.mpg.de/attachments/download/19299/cdo-{{ version }}.tar.gz
+  sha256: b31474c94548d21393758caa33f35cf7f423d5dfc84562ad80a2bdcb725b5585
+
 build:
   number: 0
   skip: True  # [win]
@@ -18,40 +19,41 @@ requirements:
     - {{ compiler('fortran') }}
   host:
     - jasper
-    - libnetcdf 4.4.*
-    - proj4 4.9.3
+    - libnetcdf
+    - proj4
     - eccodes
     - udunits2
-    - libxml2 2.9.*
+    - libxml2
     - fftw
     - cmor
-    - json-c 0.12.1
-    - ossuuid 1.6.2 0
+    - json-c
+    - ossuuid
   run:
     - jasper
-    - libnetcdf 4.4*
-    - proj4 4.9.3
+    - libnetcdf
+    - proj4
     - eccodes
     - udunits2
-    - libxml2 2.9.*
+    - libxml2
     - fftw
     - cmor
-    - ossuuid 1.6.2 0
+    - ossuuid
 
 test:
   files:
     - dummy.nc
   commands:
     - cdo -h
-    - cdo sinfo dummy.nc  # [linux]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - cdo sinfo dummy.nc
 
 about:
   home: https://code.zmaw.de/projects/cdo
   license: GPL-2.0
-  summary: 'CLI tools to manipulate and analyse Climate and NWP model Data.'
+
+  license_file: COPYING
+  summary: 'CLI tools to manipulate and analyse Climate and NWP model Data'
 
 extra:
   recipe-maintainers:
+    - Try2Code
     - ocefpaf
