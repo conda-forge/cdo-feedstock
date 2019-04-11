@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# The `ACCEPT_USE_OF_DEPRECATED_PROJ_API_H` is a temporary solution and won't work with proj4 7.
+export CFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1  ${CFLAGS}"
+
 if [[ $(uname) == 'Darwin' ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -stdlib=libc++ ${CFLAGS}"
   ARGS="--disable-openmp"
