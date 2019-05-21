@@ -32,4 +32,4 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
 proj4:
-- 6.0.0
+- 6.1.0
