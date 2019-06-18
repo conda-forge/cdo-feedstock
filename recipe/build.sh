@@ -7,7 +7,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -stdlib=libc++ ${CFLAGS}"
   ARGS="--disable-openmp"
 elif [[ $(uname) == Linux ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp -ftree-vectorize ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp ${CFLAGS}"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   ARGS="--disable-dependency-tracking"
 fi
