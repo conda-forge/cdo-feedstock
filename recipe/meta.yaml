@@ -9,7 +9,7 @@ source:
   sha256: 3771952e065bcf935d43e492707370ed2a0ecb59a06bea24f9ab69d77943962c
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -17,7 +17,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - llvm-openmp  # [osx]
   host:
+    - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
     - proj4
@@ -27,6 +29,7 @@ requirements:
     - fftw
     - ossuuid
   run:
+    - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
     - proj4
