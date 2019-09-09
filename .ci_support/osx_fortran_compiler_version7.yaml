@@ -15,7 +15,7 @@ cxx_compiler_version:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '4'
+- '7'
 jasper:
 - 1.900.1
 json_c:
@@ -40,4 +40,4 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
 proj4:
-- 5.2.0
+- 6.1.1
