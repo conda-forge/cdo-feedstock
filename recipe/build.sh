@@ -5,7 +5,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   ARGS="--disable-openmp"
 elif [[ $(uname) == Linux ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp ${CFLAGS}"
-  export LDFLAGS="-L${PREFIX}/lib -lhdf5 -ljson-c -luuid ${LDFLAGS}"
+  export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   export LIBS="-ljson-c"
   ARGS="--disable-dependency-tracking"
 fi
@@ -23,6 +23,7 @@ fi
             --with-netcdf=${PREFIX} \
             --with-hdf5=${PREFIX} \
             --with-util-linux-uuid=${PREFIX} \
+            --disable-ossp-uuid \
             --with-cmor=$PREFIX \
             ${ARGS}
 
