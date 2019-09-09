@@ -6,6 +6,7 @@ if [[ $(uname) == 'Darwin' ]]; then
 elif [[ $(uname) == Linux ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp ${CFLAGS}"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
+  export LIBS="-ljson-c"
   ARGS="--disable-dependency-tracking"
 fi
 
@@ -21,7 +22,7 @@ fi
             --with-udunits2=${PREFIX} \
             --with-netcdf=${PREFIX} \
             --with-hdf5=${PREFIX} \
-            --with-ossp-uuid=${PREFIX} \
+            --with-util-linux-uuid=${PREFIX} \
             --with-cmor=$PREFIX \
             ${ARGS}
 
