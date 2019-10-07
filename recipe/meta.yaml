@@ -1,4 +1,4 @@
-{% set version = "1.9.8rc1" %}
+{% set version = "1.9.8rc2" %}
 
 package:
   name: cdo
