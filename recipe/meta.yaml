@@ -1,12 +1,12 @@
-{% set version = "1.9.8rc1" %}
+{% set version = "1.9.8rc2" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/20455/cdo-{{ version }}.tar.gz
-  sha256: e401e67a2853cf9cc9b0cd611c2d6ef05e16c16dca272e34871f776f0fa5913a
+  url: https://code.mpimet.mpg.de/attachments/download/20539/cdo-{{ version }}.tar.gz
+  sha256: f8a00e6cd89cabbd5da31aab05d29cb7f3bd5cd912ffb62093b20008c6fcfb90
 
 build:
   number: 0
