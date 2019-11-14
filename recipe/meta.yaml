@@ -22,7 +22,7 @@ requirements:
     - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
-    - proj4
+    - proj
     - eccodes
     - udunits2
     - libxml2
@@ -32,7 +32,7 @@ requirements:
     - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
-    - proj4
+    - proj
     - eccodes
     - udunits2
     - libxml2
