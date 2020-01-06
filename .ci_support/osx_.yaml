@@ -33,9 +33,7 @@ pin_run_as_build:
     max_pin: x
   jasper:
     max_pin: x
-  libnetcdf:
-    max_pin: x.x.x
   libxml2:
     max_pin: x.x
 proj:
-- 6.2.1
+- 6.3.0
