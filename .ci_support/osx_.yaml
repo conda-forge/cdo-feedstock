@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '4'
+- '9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,17 +11,19 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '4'
+- '9'
+fftw:
+- '3'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '4'
+- '7'
 jasper:
 - 1.900.1
 json_c:
 - '0.13'
 libnetcdf:
-- 4.6.2
+- 4.7.4
 libuuid:
 - 2.32.1
 libxml2:
@@ -31,17 +33,13 @@ macos_machine:
 macos_min_version:
 - '10.9'
 pin_run_as_build:
+  fftw:
+    max_pin: x
   jasper:
     max_pin: x
   json-c:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   libuuid:
     max_pin: x
   libxml2:
     max_pin: x.x
-  proj4:
-    max_pin: x.x.x
-proj4:
-- 6.1.1
