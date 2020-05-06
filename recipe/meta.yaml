@@ -9,7 +9,7 @@ source:
   sha256: 2328299c43ecd10f8283056b6a65e6f205fb64e988ce360fc2b30672e7491e66
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script_env:
     - LIBS
@@ -22,7 +22,7 @@ requirements:
   host:
     - jasper
     - libnetcdf
-    - proj4
+    - proj
     - eccodes
     - udunits2
     - libxml2
