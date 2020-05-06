@@ -27,8 +27,6 @@ requirements:
     - udunits2
     - libxml2
     - fftw
-    - cmor
-    - json-c
     - libuuid
   run:
     - jasper
@@ -38,7 +36,6 @@ requirements:
     - udunits2
     - libxml2
     - fftw
-    - cmor
     - libuuid
 
 test:
