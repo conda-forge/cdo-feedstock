@@ -31,7 +31,7 @@ requirements:
   run:
     - jasper
     - libnetcdf
-    - proj4
+    - proj
     - eccodes
     - udunits2
     - libxml2
