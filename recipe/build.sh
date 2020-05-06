@@ -23,7 +23,6 @@ fi
             --with-hdf5=${PREFIX} \
             --with-util-linux-uuid=${PREFIX} \
             --disable-ossp-uuid \
-            --with-cmor=$PREFIX \
             ${ARGS}
 
 make
