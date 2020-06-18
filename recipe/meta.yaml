@@ -1,12 +1,12 @@
-{% set version = "1.9.9rc2" %}
+{% set version = "1.9.9rc3" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/21529/cdo-{{ version }}.tar.gz
-  sha256: 2328299c43ecd10f8283056b6a65e6f205fb64e988ce360fc2b30672e7491e66
+  url: https://code.mpimet.mpg.de/attachments/download/21941/cdo-{{ version }}.tar.gz
+  sha256: 40c102541e1a9a2ef48a84d03fe9929b1e9fa31ef0346c60554405cfddf1dd0c
 
 build:
   number: 1
@@ -27,6 +27,8 @@ requirements:
     - udunits2
     - libxml2
     - fftw
+    - cmor
+    - json-c
     - libuuid
   run:
     - jasper
@@ -36,6 +38,7 @@ requirements:
     - udunits2
     - libxml2
     - fftw
+    - cmor
     - libuuid
 
 test:

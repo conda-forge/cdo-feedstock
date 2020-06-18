@@ -8,6 +8,7 @@ elif [[ $(uname) == Linux ]]; then
   ARGS="--disable-dependency-tracking"
 fi
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
+  export LIBS="-ljson-c"
 ./configure --prefix=${PREFIX} \
             --host=${HOST} \
             --build=${BUILD} \
@@ -22,6 +23,7 @@ fi
             --with-hdf5=${PREFIX} \
             --with-util-linux-uuid=${PREFIX} \
             --disable-ossp-uuid \
+            --with-cmor=${PREFIX} \
             ${ARGS}
 
 make
