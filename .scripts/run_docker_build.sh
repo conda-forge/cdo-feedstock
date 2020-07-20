@@ -75,6 +75,8 @@ docker run ${DOCKER_RUN_ARGS} \
            -e FEEDSTOCK_NAME \
            -e CPU_COUNT \
            -e BINSTAR_TOKEN \
+           -e FEEDSTOCK_TOKEN \
+           -e STAGING_BINSTAR_TOKEN \
            $DOCKER_IMAGE \
            bash \
            /home/conda/feedstock_root/${PROVIDER_DIR}/build_steps.sh
