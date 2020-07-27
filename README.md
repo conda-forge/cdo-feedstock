@@ -5,7 +5,7 @@ Home: https://code.zmaw.de/projects/cdo
 
 Package license: GPL-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: CLI tools to manipulate and analyse Climate and NWP model Data
 

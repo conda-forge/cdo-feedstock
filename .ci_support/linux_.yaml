@@ -34,4 +34,4 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 7.0.0
+- 7.1.0
