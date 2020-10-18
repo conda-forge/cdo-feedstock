@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
+- '9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7'
+- '9'
 docker_image:
 - condaforge/linux-anvil-comp7
 fftw:
@@ -17,7 +17,7 @@ fftw:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '7'
+- '9'
 hdf5:
 - 1.10.6
 jasper:
@@ -37,3 +37,7 @@ proj:
 - 7.1.1
 target_platform:
 - linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
