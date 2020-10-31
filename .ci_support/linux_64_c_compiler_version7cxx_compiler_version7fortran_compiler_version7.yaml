@@ -1,0 +1,43 @@
+c_compiler:
+- gcc
+c_compiler_version:
+- '7'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
+fftw:
+- '3'
+fortran_compiler:
+- gfortran
+fortran_compiler_version:
+- '7'
+hdf5:
+- 1.10.6
+jasper:
+- 1.900.1
+libnetcdf:
+- 4.7.4
+libxml2:
+- '2.9'
+pin_run_as_build:
+  fftw:
+    max_pin: x
+  jasper:
+    max_pin: x
+  libxml2:
+    max_pin: x.x
+proj:
+- 7.1.1
+target_platform:
+- linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
