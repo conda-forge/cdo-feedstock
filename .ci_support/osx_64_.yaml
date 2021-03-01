@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,13 +11,13 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '10'
+- '11'
 fftw:
 - '3'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '7'
+- '9'
 hdf5:
 - 1.10.6
 jasper:
@@ -36,7 +36,7 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 7.2.0
+- 8.0.0
 target_platform:
 - osx-64
 zip_keys:
