@@ -23,6 +23,7 @@ fi
             --with-netcdf=${PREFIX} \
             --with-hdf5=${PREFIX} \
             --with-ossp-uuid=${PREFIX} \
+            --with-magics=${PREFIX} \
             ${ARGS}
 
 make
