@@ -1,4 +1,4 @@
-{% set version = "1.9.9rc4" %}
+{% set version = "2.0.0rc1" %}
 
 package:
   name: cdo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://code.mpimet.mpg.de/attachments/download/22243/cdo-{{ version }}.tar.gz
-  sha256: 4d1031d9bac9cb26bb436c74be0581a8e0a191f678092aa5421eca71a3083754
+  sha256: acd9a6515afe03fe7950adf9a17acd253e3b4d2004f9206ff55da6c7b0f937a5
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   script_env:
     - LIBS
@@ -19,7 +19,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - llvm-openmp  # [osx]
   host:
+    - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
     - proj
