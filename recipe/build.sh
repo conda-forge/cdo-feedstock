@@ -14,7 +14,6 @@ elif [[ $(uname) == Linux ]]; then
   ARGS="--disable-dependency-tracking"
 fi
 
-fi
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   export LIBS="-ljson-c"
 ./configure --prefix=${PREFIX} \
