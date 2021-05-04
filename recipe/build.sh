@@ -5,7 +5,9 @@ export CFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1  ${CFLAGS}"
 
 if [[ $(uname) == 'Darwin' ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++14 -stdlib=libc++ ${CFLAGS}"
+  export CFLAGS="${CFLAGS} -lm"
   export LDFLAGS="${LDFLAGS} -fopenmp"
+  export LIBS="-ljson-c"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++14 -fopenmp ${CFLAGS}"
