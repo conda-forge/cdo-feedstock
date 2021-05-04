@@ -1,15 +1,22 @@
 #!/bin/bash#!/bin/bash
 
+# The `ACCEPT_USE_OF_DEPRECATED_PROJ_API_H` is a temporary solution and won't work with proj4 7.
+export CFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1  ${CFLAGS}"
+
 if [[ $(uname) == 'Darwin' ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -stdlib=libc++ ${CFLAGS}"
-  ARGS="--disable-openmp"
-elif [[ $(uname) == Linux ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -stdlib=libc++ ${CFLAGS}"
   export CFLAGS="${CFLAGS} -lm"
-  ARGS="--disable-dependency-tracking"
-fi
+  export LDFLAGS="${LDFLAGS} -fopenmp"
+  export LIBS="-ljson-c"
+  ARGS=""
+elif [[ $(uname) == Linux ]]; then
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -fopenmp ${CFLAGS}"
+  export CFLAGS="${CFLAGS} -lm"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   export LIBS="-ljson-c"
+  ARGS="--disable-dependency-tracking"
+fi
+
 ./configure --prefix=${PREFIX} \
             --host=${HOST} \
             --build=${BUILD} \

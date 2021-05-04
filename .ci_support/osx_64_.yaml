@@ -1,33 +1,35 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '7'
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge dev
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '7'
-docker_image:
-- condaforge/linux-anvil-comp7
+- '11'
 fftw:
 - '3'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '7'
+- '9'
 jasper:
-- 1.900.1
+- '1'
 json_c:
-- '0.13'
+- '0.15'
 libnetcdf:
 - 4.7.4
 libuuid:
 - 2.32.1
 libxml2:
 - '2.9'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   fftw:
     max_pin: x
@@ -40,4 +42,10 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 7.0.0
+- 7.2.0
+target_platform:
+- osx-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
