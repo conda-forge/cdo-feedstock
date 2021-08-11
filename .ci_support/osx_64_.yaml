@@ -26,6 +26,8 @@ libnetcdf:
 - 4.8.0
 libxml2:
 - '2.9'
+llvm_openmp:
+- '11'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
@@ -36,7 +38,7 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 8.0.1
+- 8.1.0
 target_platform:
 - osx-64
 zip_keys:

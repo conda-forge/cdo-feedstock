@@ -36,7 +36,7 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 8.0.1
+- 8.1.0
 target_platform:
 - linux-64
 zip_keys:
