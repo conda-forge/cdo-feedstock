@@ -23,7 +23,7 @@ hdf5:
 jasper:
 - '2'
 libnetcdf:
-- 4.8.0
+- 4.8.1
 libxml2:
 - '2.9'
 llvm_openmp:
