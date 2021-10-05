@@ -24,6 +24,7 @@ fi
             --with-hdf5=${PREFIX} \
             --with-ossp-uuid=${PREFIX} \
             --with-magics=${PREFIX} \
+            --with-szlib=${PREFIX} \
             ${ARGS}
 
 make

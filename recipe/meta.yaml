@@ -30,6 +30,7 @@ requirements:
     - fftw
     - ossuuid
     - magics
+    - aec
   run:
     - llvm-openmp  # [osx]
     - jasper
@@ -42,6 +43,7 @@ requirements:
     - fftw
     - ossuuid
     - magics
+    - aec
 
 test:
   files:
