@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [[ $(uname) == 'Darwin' ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -stdlib=libc++ ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++14 -stdlib=libc++ ${CFLAGS}"
   export LDFLAGS="${LDFLAGS} -fopenmp"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++11 -fopenmp ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++14 -fopenmp ${CFLAGS}"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   ARGS="--disable-dependency-tracking"
 fi
