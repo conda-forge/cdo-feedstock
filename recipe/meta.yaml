@@ -18,6 +18,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - llvm-openmp  # [osx]
+    - make  # [unix]
   host:
     - llvm-openmp  # [osx]
     - jasper
