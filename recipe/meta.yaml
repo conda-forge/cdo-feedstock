@@ -9,7 +9,7 @@ source:
   sha256: 25520260ccb4e5324c27fa2160dfafc8152b180dd7f0133bd80425df3ef7c65a
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -30,6 +30,7 @@ requirements:
     - libxml2
     - fftw
     - ossuuid
+    - magics
   run:
     - llvm-openmp  # [osx]
     - jasper
@@ -41,6 +42,7 @@ requirements:
     - libxml2
     - fftw
     - ossuuid
+    - magics
 
 test:
   files:
@@ -48,6 +50,7 @@ test:
   commands:
     - cdo -h
     - cdo sinfo dummy.nc
+    - cdo -graph,device=png,linewidth=1 -settaxis,2000-01-01,12:00:00,1days -expr,'t=sin(seq*3.141529/180.0)' -for,1,6000 t
 
 about:
   home: https://code.zmaw.de/projects/cdo
