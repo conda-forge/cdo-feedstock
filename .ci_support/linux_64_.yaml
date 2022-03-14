@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '9'
+- '10'
 cdt_name:
 - cos6
 channel_sources:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '9'
+- '10'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fftw:
@@ -19,7 +19,7 @@ fftw:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '9'
+- '10'
 hdf5:
 - 1.12.1
 jasper:
@@ -36,7 +36,7 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 8.2.1
+- 9.0.0
 target_platform:
 - linux-64
 zip_keys:
