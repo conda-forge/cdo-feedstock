@@ -17,6 +17,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - gnuconfig  # [unix]
     - llvm-openmp  # [osx]
     - make  # [unix]
   host:
