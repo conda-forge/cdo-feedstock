@@ -26,12 +26,16 @@ jasper:
 - '2'
 libnetcdf:
 - 4.8.1
+libuuid:
+- '2'
 libxml2:
 - '2.9'
 pin_run_as_build:
   fftw:
     max_pin: x
   jasper:
+    max_pin: x
+  libuuid:
     max_pin: x
   libxml2:
     max_pin: x.x
