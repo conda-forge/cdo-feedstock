@@ -26,10 +26,10 @@ requirements:
     - hdf5
     - proj
     - eccodes
+    - libuuid
     - udunits2
     - libxml2
     - fftw
-    - ossuuid
     - magics
   run:
     - llvm-openmp  # [osx]
@@ -38,10 +38,10 @@ requirements:
     - hdf5
     - proj
     - eccodes
+    - libuuid
     - udunits2
     - libxml2
     - fftw
-    - ossuuid
     - magics
 
 test:
