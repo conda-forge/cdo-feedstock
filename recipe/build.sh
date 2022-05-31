@@ -13,6 +13,9 @@ elif [[ $(uname) == Linux ]]; then
   ARGS="--disable-dependency-tracking"
 fi
 
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
+
 ./configure --prefix=${PREFIX} \
             --host=${HOST} \
             --build=${BUILD} \
