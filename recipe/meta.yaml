@@ -9,7 +9,7 @@ source:
   sha256: edeebbf1c3b1a1f0c642dae6bc8c7624e0c54babe461064dc5c7daca4a5b0dce
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -26,10 +26,10 @@ requirements:
     - hdf5
     - proj
     - eccodes
+    - libuuid
     - udunits2
     - libxml2
     - fftw
-    - ossuuid
     - magics
   run:
     - llvm-openmp  # [osx]
@@ -38,10 +38,10 @@ requirements:
     - hdf5
     - proj
     - eccodes
+    - libuuid
     - udunits2
     - libxml2
     - fftw
-    - ossuuid
     - magics
 
 test:
