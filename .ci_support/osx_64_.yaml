@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '12'
+- '13'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '12'
+- '13'
 fftw:
 - '3'
 fortran_compiler:
@@ -27,7 +27,7 @@ libnetcdf:
 libxml2:
 - '2.9'
 llvm_openmp:
-- '12'
+- '13'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
@@ -38,7 +38,7 @@ pin_run_as_build:
   libxml2:
     max_pin: x.x
 proj:
-- 9.0.0
+- 9.0.1
 target_platform:
 - osx-64
 zip_keys:
