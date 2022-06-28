@@ -1,12 +1,12 @@
-{% set version = "2.0.0rc1" %}
+{% set version = "2.0.5" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/25343/cdo-{{ version }}.tar.gz
-  sha256: acd9a6515afe03fe7950adf9a17acd253e3b4d2004f9206ff55da6c7b0f937a5
+  url: https://code.mpimet.mpg.de/attachments/download/26823/cdo-{{ version }}.tar.gz
+  sha256: edeebbf1c3b1a1f0c642dae6bc8c7624e0c54babe461064dc5c7daca4a5b0dce
 
 build:
   number: 0
@@ -20,10 +20,12 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - llvm-openmp  # [osx]
+    - make  # [unix]
   host:
     - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
+    - hdf5
     - proj
     - eccodes
     - udunits2
@@ -32,9 +34,12 @@ requirements:
     - cmor
     - json-c
     - libuuid
+    - magics
   run:
+    - llvm-openmp  # [osx]
     - jasper
     - libnetcdf
+    - hdf5
     - proj
     - eccodes
     - udunits2
@@ -42,6 +47,7 @@ requirements:
     - fftw
     - cmor
     - libuuid
+    - magics
 
 test:
   files:
@@ -49,15 +55,16 @@ test:
   commands:
     - cdo -h
     - cdo sinfo dummy.nc
+    - cdo -graph,device=png,linewidth=1 -settaxis,2000-01-01,12:00:00,1days -expr,'t=sin(seq*3.141529/180.0)' -for,1,6000 t
 
 about:
   home: https://code.zmaw.de/projects/cdo
   license: GPL-2.0
-
   license_file: COPYING
   summary: 'CLI tools to manipulate and analyse Climate and NWP model Data'
 
 extra:
   recipe-maintainers:
+    - akrherz
     - Try2Code
     - ocefpaf
