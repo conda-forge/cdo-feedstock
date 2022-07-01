@@ -60,6 +60,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - zklaus
     - akrherz
     - Try2Code
     - ocefpaf
