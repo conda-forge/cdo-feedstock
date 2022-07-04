@@ -59,7 +59,7 @@ test:
 
 about:
   home: https://code.zmaw.de/projects/cdo
-  license: GPL-2.0
+  license: BSD-3-Clause
   license_file: COPYING
   summary: 'CLI tools to manipulate and analyse Climate and NWP model Data'
 
