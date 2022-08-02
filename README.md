@@ -172,4 +172,5 @@ Feedstock Maintainers
 * [@Try2Code](https://github.com/Try2Code/)
 * [@akrherz](https://github.com/akrherz/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@zklaus](https://github.com/zklaus/)
 
