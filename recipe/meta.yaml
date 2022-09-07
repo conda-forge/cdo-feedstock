@@ -49,7 +49,10 @@ test:
     - dummy.nc
   commands:
     - cdo -h
+    - cdo -V
+    - echo 'cdo sinfo dummy.nc'
     - cdo sinfo dummy.nc
+    - echo 'cdo -graph,device=png,linewidth=1 -settaxis,2000-01-01,12:00:00,1days -expr,'t=sin(seq*3.141529/180.0)' -for,1,6000 t'
     - cdo -graph,device=png,linewidth=1 -settaxis,2000-01-01,12:00:00,1days -expr,'t=sin(seq*3.141529/180.0)' -for,1,6000 t
 
 about:
