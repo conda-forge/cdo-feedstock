@@ -1,15 +1,15 @@
-{% set version = "2.0.5" %}
+{% set version = "2.1.0" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/26823/cdo-{{ version }}.tar.gz
-  sha256: edeebbf1c3b1a1f0c642dae6bc8c7624e0c54babe461064dc5c7daca4a5b0dce
+  url: https://code.mpimet.mpg.de/attachments/download/27481/cdo-{{ version }}.tar.gz
+  sha256: b871346c944b05566ab21893827c74616575deaad0b20eacb472b80b1fa528cc
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -48,7 +48,7 @@ test:
   files:
     - dummy.nc
   commands:
-    - cdo -h
+    - cdo -V
     - cdo sinfo dummy.nc
     - cdo -graph,device=png,linewidth=1 -settaxis,2000-01-01,12:00:00,1days -expr,'t=sin(seq*3.141529/180.0)' -for,1,6000 t
 
