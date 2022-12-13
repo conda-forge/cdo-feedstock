@@ -9,7 +9,7 @@ source:
   sha256: b871346c944b05566ab21893827c74616575deaad0b20eacb472b80b1fa528cc
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -17,6 +17,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - gnuconfig  # [unix]
     - llvm-openmp  # [osx]
     - make  # [unix]
   host:
@@ -26,10 +27,10 @@ requirements:
     - hdf5
     - proj
     - eccodes
+    - libuuid
     - udunits2
     - libxml2
     - fftw
-    - ossuuid
     - magics
   run:
     - llvm-openmp  # [osx]
@@ -38,10 +39,10 @@ requirements:
     - hdf5
     - proj
     - eccodes
+    - libuuid
     - udunits2
     - libxml2
     - fftw
-    - ossuuid
     - magics
 
 test:
@@ -54,7 +55,7 @@ test:
 
 about:
   home: https://code.zmaw.de/projects/cdo
-  license: GPL-2.0
+  license: BSD-3-Clause
   license_file: COPYING
   summary: 'CLI tools to manipulate and analyse Climate and NWP model Data'
 
