@@ -23,6 +23,7 @@ requirements:
   host:
     - llvm-openmp  # [osx]
     - jasper
+    - libcurl
     - libnetcdf
     - hdf5
     - proj
@@ -35,6 +36,7 @@ requirements:
   run:
     - llvm-openmp  # [osx]
     - jasper
+    - libcurl
     - libnetcdf
     - hdf5
     - proj
