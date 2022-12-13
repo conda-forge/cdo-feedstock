@@ -37,5 +37,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             ${ARGS}
 
 make
-make check
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+    make check
+fi
 make install
