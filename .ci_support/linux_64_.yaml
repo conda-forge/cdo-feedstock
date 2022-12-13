@@ -24,6 +24,8 @@ hdf5:
 - 1.12.2
 jasper:
 - '2'
+libcurl:
+- '7'
 libnetcdf:
 - 4.8.1
 libuuid:
