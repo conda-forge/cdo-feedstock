@@ -25,13 +25,13 @@ jasper:
 libnetcdf:
 - 4.8.1
 libxml2:
-- '2.9'
+- '2.10'
 llvm_openmp:
 - '14'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 proj:
-- 9.1.0
+- 9.1.1
 target_platform:
 - osx-64
 zip_keys:
