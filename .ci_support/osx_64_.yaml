@@ -24,6 +24,8 @@ jasper:
 - '2'
 libnetcdf:
 - 4.8.1
+libuuid:
+- '2'
 libxml2:
 - '2.10'
 llvm_openmp:
