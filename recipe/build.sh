@@ -4,7 +4,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   # export CC=clang
   # export CXX=clang++
   # export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
-  # export CPP=clang-cpp
+  export CPP=clang-cpp
   # export LDFLAGS="${LDFLAGS} -fopenmp"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
