@@ -20,7 +20,7 @@ requirements:
     - gnuconfig  # [unix]
     - llvm-openmp  # [osx]
     - make  # [unix]
-    - python  # [make check]
+    - python
   host:
     - llvm-openmp  # [osx]
     - jasper
