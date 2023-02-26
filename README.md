@@ -1,11 +1,11 @@
-About cdo
-=========
-
-Home: https://code.zmaw.de/projects/cdo
-
-Package license: BSD-3-Clause
+About cdo-feedstock
+===================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cdo-feedstock/blob/main/LICENSE.txt)
+
+Home: https://code.mpimet.mpg.de/projects/cdo
+
+Package license: BSD-3-Clause
 
 Summary: CLI tools to manipulate and analyse Climate and NWP model Data
 
