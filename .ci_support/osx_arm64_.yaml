@@ -25,7 +25,7 @@ jasper:
 libcurl:
 - '7'
 libnetcdf:
-- 4.8.1
+- 4.9.1
 libuuid:
 - '2'
 libxml2:
