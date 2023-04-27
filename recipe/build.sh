@@ -4,7 +4,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   export CPP=clang-cpp
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -fopenmp ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   ARGS="--disable-dependency-tracking"
 fi
@@ -26,6 +26,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --with-hdf5=${PREFIX} \
             --with-ossp-uuid=${PREFIX} \
             --with-magics=${PREFIX} \
+            --enable-openmp \
             ${ARGS}
 
 make
