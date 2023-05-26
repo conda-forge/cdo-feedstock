@@ -29,7 +29,7 @@ libnetcdf:
 libuuid:
 - '2'
 libxml2:
-- '2.10'
+- '2.11'
 llvm_openmp:
 - '15'
 macos_machine:
