@@ -35,7 +35,7 @@ llvm_openmp:
 macos_machine:
 - arm64-apple-darwin20.0.0
 proj:
-- 9.2.0
+- 9.2.1
 target_platform:
 - osx-arm64
 zip_keys:
