@@ -60,9 +60,6 @@ if [[ "${HOST_PLATFORM}" != "${BUILD_PLATFORM}" ]]; then
 fi
 
 
-if [[ -f LICENSE.txt ]]; then
-  cp LICENSE.txt "recipe/recipe-scripts-license.txt"
-fi
 
 if [[ -f LICENSE.txt ]]; then
   cp LICENSE.txt "recipe/recipe-scripts-license.txt"
