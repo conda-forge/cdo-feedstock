@@ -1,5 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '11.0'
 c_compiler:
 - clang
 c_compiler_version:
@@ -7,7 +7,7 @@ c_compiler_version:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge dev
+- conda-forge main
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
@@ -22,10 +22,6 @@ hdf5:
 - 1.14.0
 jasper:
 - '4'
-json_c:
-- '0.16'
-libnetcdf:
-- 4.8.1
 libcurl:
 - '8'
 libnetcdf:
@@ -37,22 +33,11 @@ libxml2:
 llvm_openmp:
 - '15'
 macos_machine:
-- x86_64-apple-darwin13.4.0
-pin_run_as_build:
-  fftw:
-    max_pin: x
-  jasper:
-    max_pin: x
-  json-c:
-    max_pin: x.x
-  libuuid:
-    max_pin: x
-  libxml2:
-    max_pin: x.x
+- arm64-apple-darwin20.0.0
 proj:
 - 9.2.1
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

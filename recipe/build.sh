@@ -10,12 +10,16 @@ if [[ $(uname) == 'Darwin' ]]; then
   export LIBS="-ljson-c"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 -std=c++14 -fopenmp ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
   export CFLAGS="${CFLAGS} -lm"
+
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   export LIBS="-ljson-c"
   ARGS="--disable-dependency-tracking"
 fi
+
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
 ./configure --prefix=${PREFIX} \
             --host=${HOST} \
@@ -33,8 +37,11 @@ fi
             --disable-ossp-uuid \
             --with-cmor=${PREFIX} \
             --with-magics=${PREFIX} \
+            --enable-openmp \
             ${ARGS}
 
 make
-make check
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+    make check
+fi
 make install

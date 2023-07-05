@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '10'
+- '12'
 cdt_name:
 - cos6
 channel_sources:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '10'
+- '12'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fftw:
@@ -19,19 +19,17 @@ fftw:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '10'
+- '12'
 hdf5:
-- 1.12.1
+- 1.14.0
 jasper:
-- '2'
+- '4'
 json_c:
 - '0.16'
-libnetcdf:
-- 4.8.1
 libuuid:
 - '2'
 libxml2:
-- '2.9'
+- '2.11'
 pin_run_as_build:
   fftw:
     max_pin: x
@@ -43,8 +41,11 @@ pin_run_as_build:
     max_pin: x
   libxml2:
     max_pin: x.x
+- '4'
+libcurl:
+- '8'
 proj:
-- 9.0.1
+- 9.2.1
 target_platform:
 - linux-64
 zip_keys:
