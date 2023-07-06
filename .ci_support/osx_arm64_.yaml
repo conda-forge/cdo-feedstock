@@ -19,7 +19,7 @@ fortran_compiler:
 fortran_compiler_version:
 - '12'
 hdf5:
-- 1.14.0
+- 1.14.1
 jasper:
 - '4'
 libcurl:
