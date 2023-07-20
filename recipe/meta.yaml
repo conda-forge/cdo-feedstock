@@ -30,8 +30,8 @@ requirements:
     - proj
     - eccodes
     - libuuid
-    - json-c  # [linux]
-    - cmor  # [linux]
+    - json-c
+    - cmor
     - udunits2
     - libxml2
     - fftw
@@ -45,8 +45,8 @@ requirements:
     - proj
     - eccodes
     - libuuid
-    - json-c  # [linux]
-    - cmor  # [linux]
+    - json-c
+    - cmor
     - udunits2
     - libxml2
     - fftw
