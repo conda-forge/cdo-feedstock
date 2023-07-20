@@ -7,7 +7,7 @@ cdt_name:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge dev
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -24,6 +24,8 @@ hdf5:
 - 1.14.1
 jasper:
 - '4'
+json_c:
+- '0.16'
 libcurl:
 - '8'
 libnetcdf:
