@@ -1,7 +1,13 @@
 #!/bin/bash
 
 if [[ $(uname) == 'Darwin' ]]; then
+  export CC=clang
+  export CXX=clang++
+  export CFLAGS="${CFLAGS} -lm"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
   export CPP=clang-cpp
+  export LDFLAGS="${LDFLAGS} -fopenmp"
+  export LIBS="-ljson-c"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
@@ -31,7 +37,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --with-magics=${PREFIX} \
             --enable-openmp \
             ${ARGS}
-
+cat config.log
 make
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
     make check
