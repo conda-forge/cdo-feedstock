@@ -2,6 +2,7 @@
 
 if [[ $(uname) == 'Darwin' ]]; then
   export CPP=clang-cpp
+  export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
