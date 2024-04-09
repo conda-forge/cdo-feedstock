@@ -4,6 +4,10 @@ c_compiler:
 - clang
 c_compiler_version:
 - '16'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -35,7 +39,7 @@ llvm_openmp:
 macos_machine:
 - arm64-apple-darwin20.0.0
 proj:
-- 9.3.1
+- 9.4.0
 target_platform:
 - osx-arm64
 zip_keys:
