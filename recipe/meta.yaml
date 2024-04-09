@@ -9,12 +9,13 @@ source:
   sha256: a4790fb8cc07f353b11f9bbe49218b8e4be8e5ae56aade8420bad390510b4d2c
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - gnuconfig  # [unix]
