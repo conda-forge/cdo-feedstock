@@ -41,7 +41,7 @@ llvm_openmp:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 proj:
-- 9.4.0
+- '9.4'
 target_platform:
 - osx-64
 zip_keys:
