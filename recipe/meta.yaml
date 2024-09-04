@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://nextcloud.dkrz.de/s/tLsfJ5KHLnQneDA
+  url: https://code.mpimet.mpg.de/attachments/download/29638/cdo-2.4.3p1.tar.gz
   sha256: 9fa02076fb613fd72b23e16d3dc5ab755b41b118ecaadf58d46a82928402ee79
 
 build:
