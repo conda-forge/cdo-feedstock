@@ -1,4 +1,4 @@
-{% set version = "2.4.1" %}
+{% set version = "2.4.3" %}
 
 package:
   name: cdo
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://code.mpimet.mpg.de/attachments/download/29421/cdo-{{ version }}.tar.gz
-  sha256: 9144d82b8ab7e73f4cb7a94cc4b884f64dff1a0455c4eb6c93ce4b568007aabf
+  sha256: 4a608b70ee1907b45e149ad44033bb47d35b7da96096553193bd362ca9d445eb
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -31,6 +31,8 @@ requirements:
     - proj
     - eccodes
     - libuuid
+    - json-c
+    - cmor
     - udunits2
     - libxml2
     - fftw
@@ -44,6 +46,8 @@ requirements:
     - proj
     - eccodes
     - libuuid
+    - json-c
+    - cmor
     - udunits2
     - libxml2
     - fftw
