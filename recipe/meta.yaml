@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/29646/cdo-{{ version }}.tar.gz
-  sha256: fc00a71dc83d9c90b172f08e0ae71e1fd3162760461600cd25cf0dfb78ff9453
+  url: https://code.mpimet.mpg.de/attachments/download/29649/cdo-{{ version }}.tar.gz
+  sha256: 49f50bd18dacd585e9518cfd4f55548f692426edfb3b27ddcd1c653eab53d063
 
 build:
   number: 0
