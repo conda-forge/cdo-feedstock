@@ -37,7 +37,7 @@ libuuid:
 libxml2:
 - '2'
 proj:
-- '9.4'
+- '9.5'
 target_platform:
 - linux-64
 zip_keys:
