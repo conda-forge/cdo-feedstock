@@ -25,7 +25,7 @@ fortran_compiler:
 fortran_compiler_version:
 - '13'
 hdf5:
-- 1.14.4
+- 1.14.3
 jasper:
 - '4'
 libcurl:
@@ -35,7 +35,7 @@ libnetcdf:
 libuuid:
 - '2'
 libxml2:
-- '2'
+- '2.13'
 proj:
 - '9.5'
 target_platform:
