@@ -9,7 +9,7 @@ source:
   sha256: e865c05c1b52fd76b80e33421554db81b38b75210820bdc40e8690f4552f68e2
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win]
 
 requirements:
@@ -32,7 +32,7 @@ requirements:
     - eccodes
     - libuuid
     - udunits2
-    - libxml2
+    - libxml2-devel
     - fftw
     - magics
   run:
@@ -45,7 +45,7 @@ requirements:
     - eccodes
     - libuuid
     - udunits2
-    - libxml2
+    - libxml2-devel
     - fftw
     - magics
 
