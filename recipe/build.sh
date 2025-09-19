@@ -5,7 +5,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
   ARGS=""
 elif [[ $(uname) == Linux ]]; then
-  export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -O2 ${CFLAGS}"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
   ARGS="--disable-dependency-tracking"
 fi
@@ -18,6 +18,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --build=${BUILD} \
             --disable-debug \
             --with-fftw3 \
+	    --with-szip \
             --with-libxml2=${PREFIX} \
             --with-curl=${PREFIX} \
             --with-proj=${PREFIX} \
