@@ -1,15 +1,15 @@
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/29786/cdo-{{ version }}.tar.gz
-  sha256: e865c05c1b52fd76b80e33421554db81b38b75210820bdc40e8690f4552f68e2
+  url: https://code.mpimet.mpg.de/attachments/download/30182/cdo-{{ version }}.tar.gz
+  sha256: 752d5cda6fa3fdb8a04dcea16af5918e5f9f54657d9a5d2e35ae34f5755c31d8
 
 build:
-  number: 8
+  number: 0
   skip: True  # [win]
 
 requirements:
