@@ -21,7 +21,6 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --build=${BUILD} \
             --disable-debug \
             --with-fftw3 \
-            --with-libxml2=${PREFIX} \
             --with-curl=${PREFIX} \
             --with-proj=${PREFIX} \
             --with-eccodes=${PREFIX} \
