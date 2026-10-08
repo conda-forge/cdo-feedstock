@@ -34,7 +34,6 @@ requirements:
     - json-c
     - cmor
     - udunits2
-    - libxml2
     - fftw
     - magics
   run:
@@ -49,7 +48,6 @@ requirements:
     - json-c
     - cmor
     - udunits2
-    - libxml2
     - fftw
     - magics
 
