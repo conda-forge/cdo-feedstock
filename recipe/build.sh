@@ -4,9 +4,12 @@ if [[ $(uname) == 'Darwin' ]]; then
   export CPP=clang-cpp
   export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
   ARGS=""
+  export LIBS="-ljson-c"
 elif [[ $(uname) == Linux ]]; then
   export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
   export LDFLAGS="-L${PREFIX}/lib -lhdf5 ${LDFLAGS}"
+  export LIBS="-ljson-c -luuid"
+  export CFLAGS="-lm ${CFLAGS}"
   ARGS="--disable-dependency-tracking"
 fi
 
@@ -25,7 +28,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --with-udunits2=${PREFIX} \
             --with-netcdf=${PREFIX} \
             --with-hdf5=${PREFIX} \
-            --with-ossp-uuid=${PREFIX} \
+	    --with-libuuid \
+	    --with-cmor=${PREFIX} \
             --with-magics=${PREFIX} \
             --enable-openmp \
             ${ARGS}
