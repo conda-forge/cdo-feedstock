@@ -28,8 +28,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --with-udunits2=${PREFIX} \
             --with-netcdf=${PREFIX} \
             --with-hdf5=${PREFIX} \
-	    --with-libuuid \
-	    --with-cmor=${PREFIX} \
+            --with-libuuid \
+            --with-cmor=${PREFIX} \
             --with-magics=${PREFIX} \
             --enable-openmp \
             ${ARGS}
