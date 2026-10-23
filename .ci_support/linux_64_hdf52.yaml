@@ -26,6 +26,8 @@ hdf5:
 - '2'
 jasper:
 - '4'
+json_c:
+- '0.18'
 libcurl:
 - '8'
 libnetcdf:
