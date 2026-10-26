@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/aarch64
 c_compiler:
 - gcc
 c_compiler_version:
@@ -15,7 +17,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '15'
 docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma10
+- quay.io/condaforge/linux-anvil-aarch64:alma10
 fftw:
 - '3'
 fortran_compiler:
@@ -35,7 +37,7 @@ libuuid:
 libxml2_devel:
 - '2.15'
 proj:
-- '9.8'
+- '9.9'
 target_platform:
 - linux-aarch64
 zip_keys:
