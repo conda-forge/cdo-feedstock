@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/amd64
 c_compiler:
 - gcc
 c_compiler_version:
@@ -35,7 +37,7 @@ libuuid:
 libxml2_devel:
 - '2.15'
 proj:
-- '9.8'
+- '9.9'
 target_platform:
 - linux-64
 zip_keys:
