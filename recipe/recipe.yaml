@@ -1,0 +1,80 @@
+schema_version: 1
+
+context:
+  version: "2.6.5"
+
+package:
+  name: cdo
+  version: ${{ version }}
+
+source:
+  url: https://code.mpimet.mpg.de/attachments/download/30247/cdo-${{ version }}.tar.gz
+  sha256: bbb58a519b463aa54477346794754a9936f2f09059a83fa9c82e76f1a13a5caf
+
+build:
+  number: 2
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - ${{ compiler('fortran') }}
+    - if: unix
+      then: gnuconfig
+    - if: osx
+      then: llvm-openmp
+    - if: unix
+      then: make
+    - python >=3.6  # for make check; a version constraint keeps it out of the build matrix
+  host:
+    - if: osx
+      then: llvm-openmp
+    - jasper
+    - libcurl
+    - libnetcdf
+    - hdf5
+    - proj
+    - eccodes
+    - libuuid
+    - udunits2
+    - libxml2-devel
+    - fftw
+    - magics
+  run:
+    - if: osx
+      then: llvm-openmp
+    - jasper
+    - libcurl
+    - libnetcdf
+    - hdf5
+    - proj
+    - eccodes
+    - libuuid
+    - udunits2
+    - libxml2-devel
+    - fftw
+    - magics
+
+tests:
+  - files:
+      recipe:
+        - dummy.nc
+    script:
+      - cdo -V
+      - cdo -sinfo dummy.nc
+      - cdo -graph,device=png,linewidth=1 -settaxis,2000-01-01,12:00:00,1days -expr,'t=sin(seq*3.141529/180.0)' -for,1,6000 t
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: CLI tools to manipulate and analyse Climate and NWP model Data
+  homepage: https://code.mpimet.mpg.de/projects/cdo
+
+extra:
+  recipe-maintainers:
+    - zklaus
+    - akrherz
+    - Try2Code
+    - ocefpaf
