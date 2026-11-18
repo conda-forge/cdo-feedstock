@@ -30,8 +30,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --enable-openmp \
             ${ARGS}
 
-make
+make -j${CPU_COUNT}
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-    make check
+    make -j${CPU_COUNT} check
 fi
 make install
