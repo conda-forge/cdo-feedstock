@@ -10,6 +10,11 @@ elif [[ $(uname) == Linux ]]; then
   ARGS="--disable-dependency-tracking"
 fi
 
+# Use the Python from the build environment for the tests: rattler-build sets
+# PYTHON to $PREFIX/bin/python, which gives shebang lines that are too long
+# for Linux because $PREFIX is padded.
+export PYTHON="${BUILD_PREFIX}/bin/python"
+
 # Get an updated config.sub and config.guess
 cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
@@ -30,8 +35,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
             --enable-openmp \
             ${ARGS}
 
-make
+make -j${CPU_COUNT}
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-    make check
+    make -j${CPU_COUNT} check
 fi
 make install
