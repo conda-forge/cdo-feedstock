@@ -8,7 +8,10 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/30247/cdo-${{ version }}.tar.gz
+  url:
+    - https://code.mpimet.mpg.de/attachments/download/30247/cdo-${{ version }}.tar.gz
+    # backup in case above is down
+    - https://mirror.spack.io/_source-cache/archive/bb/bbb58a519b463aa54477346794754a9936f2f09059a83fa9c82e76f1a13a5caf.tar.gz
   sha256: bbb58a519b463aa54477346794754a9936f2f09059a83fa9c82e76f1a13a5caf
 
 build:
